@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>研究業績一覧</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner">
+        <a class="site-name" href="#">研究業績一覧 <span>offline</span></a>
+        <label class="upload">
+          <input id="file-input" type="file" accept=".json,.jsonl,application/json" />
+          JSON / JSONLをアップロード
+        </label>
+      </div>
+    </header>
+    <main class="page">
+      <section class="profile">
+        <div class="profile-photo" aria-hidden="true">RM</div>
+        <div class="profile-main">
+          <p class="profile-id">研究者ID: <span id="profile-id">未読込</span></p>
+          <h1 id="researcher-name">研究者情報を読み込んでください</h1>
+          <p class="name-en" id="researcher-name-en"></p>
+          <p class="affiliation" id="affiliation-summary">JSON / JSONLをアップロードすると表示されます</p>
+          <div class="links" id="external-links"></div>
+        </div>
+      </section>
+      <div class="toolbar">
+        <input id="search-input" type="search" placeholder="プロフィール内を検索" />
+        <span id="source-status">エクスポートデータを読み込ませてください。</span>
+      </div>
+      <div class="layout">
+        <nav class="side-nav" aria-label="研究者情報">
+          <a href="#basic">基本情報</a>
+          <a href="#keywords">研究キーワード</a>
+          <a href="#research-interests">研究分野</a>
+          <a href="#experience">経歴</a>
+          <a href="#education">学歴</a>
+          <a href="#committees">委員歴</a>
+          <a href="#awards">受賞</a>
+          <a href="#papers">論文</a>
+          <a href="#misc">その他の業績（misc）</a>
+          <a href="#presentations">講演・口頭発表等</a>
+          <a href="#associations">所属学協会</a>
+          <a href="#social">社会貢献活動</a>
+          <a href="#media">メディア報道</a>
+          <a href="#others">その他</a>
+        </nav>
+        <div class="sections" id="sections">
+          <section class="section" id="basic">
+            <h2>基本情報</h2>
+            <div id="basic-list"></div>
+          </section>
+          <section class="section" id="keywords">
+            <h2>研究キーワード</h2>
+            <div id="keyword-list"></div>
+          </section>
+          <section class="section" id="research-interests">
+            <h2>研究分野</h2>
+            <div id="research-area-list"></div>
+          </section>
+          <section class="section" id="experience">
+            <h2>経歴</h2>
+            <div id="experience-list"></div>
+          </section>
+          <section class="section" id="education">
+            <h2>学歴</h2>
+            <div id="education-list"></div>
+          </section>
+          <section class="section" id="committees">
+            <h2>委員歴</h2>
+            <div class="record-list" id="committees-list"></div>
+          </section>
+          <section class="section" id="awards">
+            <h2>受賞</h2>
+            <div class="record-list" id="awards-list"></div>
+          </section>
+          <section class="section" id="papers">
+            <h2>論文</h2>
+            <div class="record-list" id="papers-list"></div>
+          </section>
+          <section class="section" id="misc">
+            <h2>その他の業績（misc）</h2>
+            <div class="record-list" id="misc-list"></div>
+          </section>
+          <section class="section" id="presentations">
+            <h2>講演・口頭発表等</h2>
+            <div class="record-list" id="presentations-list"></div>
+          </section>
+          <section class="section" id="associations">
+            <h2>所属学協会</h2>
+            <div class="record-list" id="associations-list"></div>
+          </section>
+          <section class="section" id="social">
+            <h2>社会貢献活動</h2>
+            <div class="record-list" id="social-list"></div>
+          </section>
+          <section class="section" id="media">
+            <h2>メディア報道</h2>
+            <div class="record-list" id="media-list"></div>
+          </section>
+          <section class="section" id="others">
+            <h2>その他</h2>
+            <div class="record-list" id="others-list"></div>
+          </section>
+        </div>
+      </div>
+    </main>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
