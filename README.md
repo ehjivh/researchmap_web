@@ -1,4 +1,4 @@
-# Researchmap offline
+# 研究業績一覧
 
 ResearchmapからエクスポートしたJSON / JSONLデータを、ブラウザ上で閲覧するための軽量なオフラインビューアです。
 
@@ -72,14 +72,12 @@ researchmap_web/
 ├─ index.html
 ├─ styles.css
 ├─ app.js
-├─ rm_researchers20261023.json
 └─ README.md
 ```
 
 - `index.html`: 画面の構造
 - `styles.css`: 表示スタイル
 - `app.js`: JSON読み込み、分類、検索、引用生成
-- `rm_researchers20261023.json`: サンプルとして置かれているエクスポートデータ
 
 ## 注意事項
 
